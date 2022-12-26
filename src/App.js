@@ -3,6 +3,7 @@ import {Canvas} from "@react-three/fiber";
 import "./style.css"
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import Ground from "./Ground"
+import Car from "./Car"
 
 function CarShow(){
   return (
@@ -15,7 +16,7 @@ function CarShow(){
 {/* without react-three/fiber */}
     {/* let color = new Color(0,0,0); */}
     <color args={[0,0,0]} attach="background"/>
-
+<Car/>
 {/* without react-three/fiber */}
     {/* let spotlight = new Spotlight();
     spotlight.intensity = 1.5;
