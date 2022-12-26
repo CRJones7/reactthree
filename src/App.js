@@ -12,9 +12,11 @@ function CarShow(){
     {/* camera itself field of view and the default */}
     <PerspectiveCamera makeDefault fov={50} position={[3,2,5]}/>
 
+{/* without react-three/fiber */}
     {/* let color = new Color(0,0,0); */}
     <color args={[0,0,0]} attach="background"/>
 
+{/* without react-three/fiber */}
     {/* let spotlight = new Spotlight();
     spotlight.intensity = 1.5;
     spotlight.position.set(...)
