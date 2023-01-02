@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reactthree/static/css/main.ff9ba0a8.css",
+    "main.js": "/reactthree/static/js/main.be539adc.js",
+    "index.html": "/reactthree/index.html",
+    "main.ff9ba0a8.css.map": "/reactthree/static/css/main.ff9ba0a8.css.map",
+    "main.be539adc.js.map": "/reactthree/static/js/main.be539adc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff9ba0a8.css",
+    "static/js/main.be539adc.js"
+  ]
+}
