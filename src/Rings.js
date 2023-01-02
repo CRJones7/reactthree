@@ -11,28 +11,31 @@ const Rings = () => {
     //useful when animating
     useFrame((state) => {
         for(let i = 0; i < itemsRef.current.length; i++){
-            //getting the reference to each ring
-            let mesh = itemsRef.current[i]
-            // range of the elements is [-7, 6] because we have 14 rings
-            let z = (i - 7) * 3.5;
-            mesh.position.set(0,0, -z)
-            
-            let dist = Math.abs(z)
-            mesh.scale.set(1 - dist * 0.04, 1 - dist * 0.04)
+            let elapsed = state.clock.getElapsedTime();
 
-            let colorScale = 1
+    for (let i = 0; i < itemsRef.current.length; i++) {
+        //reference to each ring
+      let mesh = itemsRef.current[i];
+    //   position of ring at any given time
+      let z = (i - 7) * 3.5 + ((elapsed * 0.4) % 3.5) * 2;
+      //distnace of ring from center
+      let dist = Math.abs(z);
+      mesh.position.set(0, 0, -z);
+      mesh.scale.set(1 - dist * 0.04, 1 - dist * 0.04, 1 - dist * 0.04);
 
-            if(dist > 2){
-                colorScale = 1 - (Math.min(dist, 12) - 2) / 10
-            }
-            colorScale *= 0.5
+      let colorScale = 1;
+      if (dist > 2) {
+        colorScale = 1 - (Math.min(dist, 12) - 2) / 10;
+      }
+      colorScale *= 0.5;
 
-            if(i % 2 == 1){
-                mesh.material.emissive = new Color(6, 0.15, 0.7)//.multiplyScaler(colorScale)
-            }else{
-                mesh.material.emissive = new Color(0.1, 0.7, 3)//.multiplyScaler(colorScale)
-            }
-        }
+      if (i % 2 == 1) {
+        mesh.material.emissive = new Color(6, 0.15, 0.7)//.multiplyScalar(colorScale);
+      } else {
+        mesh.material.emissive = new Color(0.1, 0.7, 3)//.multiplyScalar(colorScale);
+      }
+    }
+}
     })
 
     return (
