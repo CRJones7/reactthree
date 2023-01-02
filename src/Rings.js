@@ -29,7 +29,7 @@ const Rings = () => {
       }
       colorScale *= 0.5;
 
-      if (i % 2 == 1) {
+      if (i % 2 === 1) {
         mesh.material.emissive = new Color(6, 0.15, 0.7)//.multiplyScalar(colorScale);
       } else {
         mesh.material.emissive = new Color(0.1, 0.7, 3)//.multiplyScalar(colorScale);
