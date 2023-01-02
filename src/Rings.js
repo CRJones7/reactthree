@@ -23,7 +23,7 @@ const Rings = () => {
             let colorScale = 1
 
             if(dist > 2){
-                colorScale = 1 - (Math.min(dist, 12) -2) / 10
+                colorScale = 1 - (Math.min(dist, 12) - 2) / 10
             }
             colorScale *= 0.5
 
