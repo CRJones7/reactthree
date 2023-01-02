@@ -4,6 +4,7 @@ import "./style.css"
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import Ground from "./Ground"
 import Car from "./Car"
+import Rings from "./Rings"
 
 function CarShow(){
   return (
@@ -16,7 +17,9 @@ function CarShow(){
 {/* without react-three/fiber */}
     {/* let color = new Color(0,0,0); */}
     <color args={[0,0,0]} attach="background"/>
+  
 <Car/>
+<Rings/>
 {/* without react-three/fiber */}
     {/* let spotlight = new Spotlight();
     spotlight.intensity = 1.5;
@@ -24,7 +27,7 @@ function CarShow(){
      */}
 
      <spotLight
-      color={[1, 0.25, 0.7]}
+      color={[1, 1, 0.7]}
       intensity={1.5}
       angle={0.6}
       penumbra={0.5}
